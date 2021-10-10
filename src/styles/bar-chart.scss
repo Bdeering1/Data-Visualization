@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1px 20px 0;
+  //display: flow-root; /* no supported by IE 11 */
+  background: #C3D1DF;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial;
+  
+  #title {
+    font-size: 2.5em;
+  }
+  .container {
+    position: relative;
+    background: #FAFAFA;
+    box-shadow: 1px 1px 20px;
+  }
+}
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  padding: 2px;
+  font: 12px;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  background: #FAFAFA;
+  pointer-events: none;
+}

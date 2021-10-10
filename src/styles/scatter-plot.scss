@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  background: #C3D1DF;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial;
+}
+
+#title {
+  margin-bottom: 0;
+}
+#subtitle {
+  margin-top: 0;
+}
+
+.container {
+  position: relative;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 20px;
+  
+  #legend {
+    position: absolute;
+    background: orange;
+    font-size: 0.75em;
+  }
+  
+  #tooltip {
+    position: absolute;
+    padding: 0.5em;
+    transform: translate(20px, -50%);
+    background: orange;
+    color: #FAFAFA;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
