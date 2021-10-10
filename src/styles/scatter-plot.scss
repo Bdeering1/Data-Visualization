@@ -1,15 +1,3 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0 20px;
-  background: #C3D1DF;
-}
-
 main {
   height: 100vh;
   display: flex;
@@ -19,14 +7,14 @@ main {
   font-family: Arial;
 }
 
-#title {
+.scatter-plot#title {
   margin-bottom: 0;
 }
 #subtitle {
   margin-top: 0;
 }
 
-.container {
+.scatter-plot.container {
   position: relative;
   background: #FAFAFA;
   box-shadow: 1px 1px 20px;
