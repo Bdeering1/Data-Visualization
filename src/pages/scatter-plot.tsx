@@ -1,20 +1,19 @@
 import React from 'react';
 import * as d3 from 'd3';
+import Layout from '../components/Layout';
 import '../styles/scatter-plot.scss';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
 
 	return (
-		<main>
-			<div className='wrapper'>
-				<h1 id='scatter-plot title'>Doping in Professional Cycling</h1>
-				<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
-				<div className='scatter-plot container'>
-					<div id='tooltip'></div>
-				</div>
+		<div className='wrapper'>
+			<h1 id='scatter-plot title'>Doping in Professional Cycling</h1>
+			<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
+			<div className='scatter-plot container'>
+				<div id='tooltip'></div>
 			</div>
-		</main>
+		</div>
 	);
 };
 export default ScatterPlot;
