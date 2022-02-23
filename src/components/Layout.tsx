@@ -18,16 +18,16 @@ const Layout = (props: {children: React.ReactNode}) => {
 	`);
 
 	return (
-		<div>
+		<>
 			<header>
-				{data.site.siteMetadata.menuLinks.map((link: {link: string; name: string}, idx) => (
+				{data.site.siteMetadata.menuLinks.map((link: {link: string; name: string}, idx: number) => (
 					<Link to={link.link} key={idx}>
 						{link.name}
 					</Link>
 				))}
 			</header>
 			<main>{props.children}</main>
-		</div>
+		</>
 	);
 };
 export default Layout;
