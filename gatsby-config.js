@@ -1,6 +1,20 @@
 module.exports = {
 	siteMetadata: {
-		title: 'data-visualization'
+		title: 'data-visualization',
+		menuLinks: [
+			{
+				name: 'home',
+				link: '/',
+			},
+			{
+				name: 'bar chart',
+				link: '/bar-chart',
+			},
+			{
+				name: 'scatter plot',
+				link: '/scatter-plot',
+			},
+		],
 	},
 	plugins: [
 		'gatsby-plugin-sass',
@@ -11,14 +25,14 @@ module.exports = {
 			options: {
 				isTSX: true,
 				jsxPragma: `jsx`,
-				allExtensions: true
-			}
+				allExtensions: true,
+			},
 		},
 		{
 			resolve: `gatsby-plugin-layout`,
 			options: {
-				component: require.resolve('./src/components/Layout.tsx')
-			}
-		}
-	]
+				component: require.resolve('./src/components/Layout.tsx'),
+			},
+		},
+	],
 };
