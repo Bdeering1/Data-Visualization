@@ -8,12 +8,12 @@
 		"gatsby"
 	],
 	"scripts": {
-		"develop": "gatsby develop --open",
-		"start": "gatsby develop",
+		"develop": "gatsby develop",
+		"start": "gatsby clean && gatsby develop --open",
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
-		"cleandev": "gatsby clean && gatsby develop"
+		"buildtest": "gatsby clean && gatsby build --prefix-paths && gatsby serve --prefix-paths -o"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.5.0",

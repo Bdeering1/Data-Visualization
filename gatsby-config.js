@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: '',
 	siteMetadata: {
 		siteUrl: 'https://www.yourdomain.tld',
 		title: 'data-visualization',
@@ -27,11 +28,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-sass',
 			options: {
-				postCssPlugins: [
-					require('tailwindcss'),
-					require('./tailwind.config.js')
-				]
-			}
+				postCssPlugins: [require('tailwindcss'), require('./tailwind.config.js')],
+			},
 		},
 		{
 			resolve: `gatsby-plugin-typescript`,
