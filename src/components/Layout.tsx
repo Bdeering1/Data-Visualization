@@ -19,12 +19,16 @@ const Layout = (props: {children: React.ReactNode}) => {
 
 	return (
 		<>
-			<header>
-				{data.site.siteMetadata.menuLinks.map((link: {link: string; name: string}, idx: number) => (
-					<Link to={link.link} key={idx}>
-						{link.name}
-					</Link>
-				))}
+			<header className='h-12 bg-sky-700'>
+				<nav className='flex justify-end space-x-1'>
+					{data.site.siteMetadata.menuLinks.map(
+						(link: {link: string; name: string}, idx: number) => (
+							<Link to={link.link} key={idx} className=''>
+								{link.name}
+							</Link>
+						)
+					)}
+				</nav>
 			</header>
 			<main>{props.children}</main>
 		</>
