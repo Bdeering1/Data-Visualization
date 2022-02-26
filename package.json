@@ -1,34 +1,35 @@
 {
-  "name": "data-visualization",
-  "version": "1.0.0",
-  "private": true,
-  "description": "data-visualization",
-  "author": "Bryn Deering",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.5.0",
-    "@heroicons/react": "^1.0.5",
-    "d3": "^7.1.1",
-    "gatsby": "^3.13.1",
-    "gatsby-plugin-layout": "^3.7.0",
-    "gatsby-plugin-react-helmet": "^4.14.0",
-    "gatsby-plugin-sass": "^4.14.0",
-    "gatsby-plugin-sitemap": "^4.10.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.49.9"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.0.23"
-  }
+	"name": "data-visualization",
+	"version": "1.0.0",
+	"private": true,
+	"description": "data-visualization",
+	"author": "Bryn Deering",
+	"keywords": [
+		"gatsby"
+	],
+	"scripts": {
+		"develop": "gatsby develop --open",
+		"start": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"cleandev": "gatsby clean && gatsby develop"
+	},
+	"dependencies": {
+		"@headlessui/react": "^1.5.0",
+		"@heroicons/react": "^1.0.5",
+		"d3": "^7.1.1",
+		"gatsby": "^3.13.1",
+		"gatsby-plugin-layout": "^3.7.0",
+		"gatsby-plugin-react-helmet": "^4.14.0",
+		"gatsby-plugin-sass": "^4.14.0",
+		"gatsby-plugin-sitemap": "^4.10.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-helmet": "^6.1.0",
+		"sass": "^1.49.9"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.0.23"
+	}
 }

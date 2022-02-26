@@ -18,8 +18,8 @@ const Layout = (props: {children: React.ReactNode}) => {
 
 	return (
 		<>
-			<header className='h-12 bg-sky-700'>
-				<nav className='flex justify-end space-x-1'>
+			<header className='flex justify-end items-center h-12 bg-sky-700'>
+				<nav className='flex space-x-2 m-2'>
 					{data.site.siteMetadata.menuLinks.map(
 						(link: {link: string; name: string}, idx: number) => (
 							<Link to={link.link} key={idx} className=''>
@@ -29,10 +29,8 @@ const Layout = (props: {children: React.ReactNode}) => {
 					)}
 				</nav>
 			</header>
-			<main>
-				<div className='content flex flex-col justify-center items-center space-y-2 h-full'>
-					{props.children}
-				</div>
+			<main className='h-[calc(100%-3rem)]'>
+				<div className='content'>{props.children}</div>
 			</main>
 		</>
 	);

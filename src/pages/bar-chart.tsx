@@ -6,7 +6,7 @@ const BarChart = () => {
 
 	return (
 		<>
-			<h1 className='title'>United States GDP</h1>
+			<h1 id='title'>United States GDP</h1>
 			<div className='bar-chart container'></div>
 		</>
 	);

@@ -6,7 +6,7 @@ const ScatterPlot = () => {
 
 	return (
 		<>
-			<h1 className='title'>Doping in Professional Cycling</h1>
+			<h1 id='title'>Doping in Professional Cycling</h1>
 			<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
 			<div className='scatter-plot container'>
 				<div id='tooltip'></div>
