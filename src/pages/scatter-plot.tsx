@@ -1,6 +1,5 @@
 import React from 'react';
 import * as d3 from 'd3';
-import '../styles/scatter-plot.scss';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
