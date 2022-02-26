@@ -1,4 +1,15 @@
-@import 'components/index';
 @import 'components/bar-chart';
 @import 'components/scatter-plot';
-@import 'components/heat-map';
+
+@layer components {
+  .content {
+    @apply flex flex-col justify-center items-center h-full;
+  }
+  #title {
+    font-size: 2.5em;
+  }
+  .container {
+    width: unset;
+    max-width: unset;
+  }
+}

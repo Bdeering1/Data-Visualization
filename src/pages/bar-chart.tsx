@@ -5,10 +5,10 @@ const BarChart = () => {
 	React.useEffect(createChart, []);
 
 	return (
-		<div className='wrapper'>
-			<h1 id='bar-chart title'>United States GDP</h1>
+		<>
+			<h1 id='title'>United States GDP</h1>
 			<div className='bar-chart container'></div>
-		</div>
+		</>
 	);
 };
 export default BarChart;

@@ -1,39 +1,26 @@
-.wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: Arial;
-  
-  .bar-chart#title {
-    font-size: 2.5em;
-  }
-  .bar-chart.container {
-    position: relative;
-    background: #FAFAFA;
-    box-shadow: 1px 1px 20px;
+.bar-chart.container {
+  position: relative;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 20px;
 
-    #tooltip {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      width: 150px;
-      height: 50px;
-      padding: 2px;
-      font: 12px;
-      background: #FAFAFA;
-      box-shadow: 1px 1px 10px;
-      border-radius: 2px;
-      pointer-events: none;
-    }
-    
-    .overlay {
-      position: absolute;
-      background: #FAFAFA;
-      pointer-events: none;
-    }
+  #tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    padding: 2px;
+    font: 12px;
+    background: #FAFAFA;
+    box-shadow: 1px 1px 10px;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  
+  .overlay {
+    position: absolute;
+    background: #FAFAFA;
+    pointer-events: none;
   }
 }
