@@ -15,6 +15,10 @@ module.exports = {
 				name: 'scatter plot',
 				link: '/scatter-plot',
 			},
+			{
+				name: 'heat map',
+				link: '/heat-map',
+			},
 		],
 	},
 	plugins: [
