@@ -22,9 +22,17 @@ module.exports = {
 		],
 	},
 	plugins: [
-		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sitemap',
+		{
+			resolve: 'gatsby-plugin-sass',
+			options: {
+				postCssPlugins: [
+					require('tailwindcss'),
+					require('./tailwind.config.js')
+				]
+			}
+		},
 		{
 			resolve: `gatsby-plugin-typescript`,
 			options: {

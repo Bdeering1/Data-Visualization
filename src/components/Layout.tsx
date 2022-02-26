@@ -1,6 +1,5 @@
 import {graphql, Link, useStaticQuery} from 'gatsby';
 import * as React from 'react';
-import '../styles/app.scss';
 
 const Layout = (props: {children: React.ReactNode}) => {
 	const data = useStaticQuery(graphql`
@@ -30,7 +29,11 @@ const Layout = (props: {children: React.ReactNode}) => {
 					)}
 				</nav>
 			</header>
-			<main>{props.children}</main>
+			<main>
+				<div className='content flex flex-col justify-center items-center space-y-2 h-full'>
+					{props.children}
+				</div>
+			</main>
 		</>
 	);
 };

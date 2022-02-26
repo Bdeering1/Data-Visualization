@@ -1,4 +1,8 @@
-@import 'components/index';
 @import 'components/bar-chart';
 @import 'components/scatter-plot';
-@import 'components/heat-map';
+
+@layer components {
+  .title {
+    font-size: 2.5em;
+  }
+}

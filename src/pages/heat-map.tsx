@@ -4,9 +4,9 @@ const HeatMap = () => {
 	React.useEffect(createMap, []);
 
 	return (
-		<div className='wrapper'>
-			<h1 className='heat-map title'></h1>
-			<div className='heat-map container'></div>
+		<div className=''>
+			<h1 className=''></h1>
+			<div className=''></div>
 		</div>
 	);
 };

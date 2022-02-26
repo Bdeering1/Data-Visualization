@@ -5,13 +5,13 @@ const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
 
 	return (
-		<div className='wrapper'>
-			<h1 id='scatter-plot title'>Doping in Professional Cycling</h1>
+		<>
+			<h1 className='title'>Doping in Professional Cycling</h1>
 			<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
 			<div className='scatter-plot container'>
 				<div id='tooltip'></div>
 			</div>
-		</div>
+		</>
 	);
 };
 export default ScatterPlot;
