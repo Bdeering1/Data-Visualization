@@ -6,8 +6,14 @@ const BarChart = () => {
 
 	return (
 		<>
-			<h1 id='title'>United States GDP</h1>
-			<div className='bar-chart container'></div>
+			<div className='title-wrapper'>
+				<h1 id='title' className='bar-chart'>
+					United States GDP
+				</h1>
+			</div>
+			<div className='bar-chart container'>
+				<div id='tooltip' className='bar-chart'></div>
+			</div>
 		</>
 	);
 };
@@ -19,7 +25,7 @@ function createChart() {
 	let height = 0.6 * window.innerHeight;
 	let padding = 60;
 
-	let tooltip = d3.select('.container').append('div').attr('id', 'tooltip').style('opacity', 0);
+	let tooltip = d3.select('#tooltip').attr('id', 'tooltip').style('opacity', 0);
 
 	let overlay = d3.select('.container').append('div').attr('class', 'overlay').style('opacity', 0);
 

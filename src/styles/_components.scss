@@ -3,12 +3,19 @@
 
 @layer components {
   .content {
-    @apply flex flex-col justify-center items-center h-full;
+    @apply relative flex flex-col justify-center items-center bg-slate-200 h-full;
   }
-  #title {
-    font-size: 2.5em;
+  .title-wrapper {
+    @apply absolute top-10;
+    #title {
+      @apply text-6xl xl:text-7xl text-slate-600;
+    }
+    #subtitle {
+      @apply text-center text-xl text-slate-500 mt-1;
+    }
   }
   .container {
+    @apply relative rounded shadow-3xl bg-slate-100;
     width: unset;
     max-width: unset;
   }

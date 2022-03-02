@@ -6,10 +6,14 @@ const ScatterPlot = () => {
 
 	return (
 		<>
-			<h1 id='title'>Doping in Professional Cycling</h1>
-			<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
+			<div className='title-wrapper'>
+				<h1 id='title' className='scatter-plot'>
+					Doping in Professional Cycling
+				</h1>
+				<h2 id='subtitle'>35 Fastest times up Alpe d'Huez</h2>
+			</div>
 			<div className='scatter-plot container'>
-				<div id='tooltip'></div>
+				<div id='tooltip' className='scatter-plot'></div>
 			</div>
 		</>
 	);
@@ -54,12 +58,13 @@ function createPlot() {
 		svg.append('g').attr('transform', `translate(${padding}, 0)`).attr('id', 'y-axis').call(yAxis);
 
 		let labels = [
-			{ text: 'Doping allegations', color: '#D85A5E' },
-			{ text: 'No doping allegations', color: '#1C5491' }
+			{text: 'Doping allegations', color: '#D85A5E'},
+			{text: 'No doping allegations', color: '#1C5491'},
 		];
 		const legend = svg
 			.append('g')
 			.attr('id', 'legend')
+			.attr('class', 'scatter-plot')
 			.selectAll('g')
 			.data(labels)
 			.enter()

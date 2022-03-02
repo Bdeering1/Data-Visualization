@@ -1,21 +1,15 @@
-.scatter-plot.container {
-  position: relative;
-  background: #FAFAFA;
-  box-shadow: 1px 1px 20px;
-  
-  #legend {
-    position: absolute;
-    background: orange;
-    font-size: 0.75em;
-  }
-  
-  #tooltip {
-    position: absolute;
-    padding: 0.5em;
-    transform: translate(20px, -50%);
-    background: orange;
-    color: #FAFAFA;
-    opacity: 0;
-    pointer-events: none;
-  }
+#legend.scatter-plot {
+  position: absolute;
+  background: orange;
+  font-size: 0.75em;
+}
+
+#tooltip.scatter-plot {
+  position: absolute;
+  padding: 0.5em;
+  transform: translate(20px, -50%);
+  background: orange;
+  color: #FAFAFA;
+  opacity: 0;
+  pointer-events: none;
 }
