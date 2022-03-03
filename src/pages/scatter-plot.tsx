@@ -1,5 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
+import {NumberValue} from 'd3';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
@@ -30,9 +31,9 @@ function createPlot() {
 
 	d3.json(
 		'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json'
-	).then((data) => {
-		const years = data.map((d) => d.Year);
-		const timeMins = data.map((d) => {
+	).then((data: any) => {
+		const years: Iterable<number> = data.map((d) => d.Year);
+		const timeMins: Iterable<number> = data.map((d) => {
 			let parsedTime = d.Time.split(':');
 			return new Date(0, 0, 0, 0, parsedTime[0], parsedTime[1]);
 		});
@@ -48,7 +49,9 @@ function createPlot() {
 			.range([padding, height - padding]);
 
 		const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'));
-		const yAxis = d3.axisLeft(yScale).tickFormat(d3.timeFormat('%M:%S'));
+		const yAxis = d3
+			.axisLeft(yScale)
+			.tickFormat(d3.timeFormat('%M:%S') as (dv: Date | {valueOf(): number}, i: number) => string);
 
 		svg
 			.append('g')
