@@ -1,6 +1,5 @@
 import React from 'react';
 import * as d3 from 'd3';
-import {NumberValue} from 'd3';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
@@ -49,9 +48,7 @@ function createPlot() {
 			.range([padding, height - padding]);
 
 		const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'));
-		const yAxis = d3
-			.axisLeft(yScale)
-			.tickFormat(d3.timeFormat('%M:%S') as (dv: Date | {valueOf(): number}, i: number) => string);
+		const yAxis = d3.axisLeft<Date>(yScale).tickFormat(d3.timeFormat('%M:%S'));
 
 		svg
 			.append('g')
