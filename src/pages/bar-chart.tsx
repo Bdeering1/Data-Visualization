@@ -1,5 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
+import {clamp} from 'lodash';
 
 const BarChart = () => {
 	React.useEffect(createChart, []);
@@ -91,14 +92,4 @@ function createChart() {
 		const yAxis = d3.axisLeft(yScale);
 		svg.append('g').attr('transform', `translate(${padding}, 0)`).attr('id', 'y-axis').call(yAxis);
 	});
-}
-
-function clamp(n, min, max) {
-	if (n > max) {
-		return max;
-	} else if (n < min) {
-		return min;
-	} else {
-		return n;
-	}
 }

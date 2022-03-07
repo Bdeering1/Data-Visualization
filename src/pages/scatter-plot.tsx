@@ -1,5 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
+import {clamp} from 'lodash';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
@@ -22,7 +23,7 @@ export default ScatterPlot;
 
 function createPlot() {
 	let preferedWidth = document.documentElement.clientWidth - 40;
-	let width = clamp(preferedWidth, 800, 1024); /* body has 40px of left/right padding */
+	let width = clamp(preferedWidth, 800, 1024);
 	let height = 0.6 * window.innerHeight;
 	let padding = 60;
 
@@ -121,14 +122,4 @@ function createPlot() {
 				.style('opacity', 0.9);
 		}
 	});
-}
-
-function clamp(n, min, max) {
-	if (n > max) {
-		return max;
-	} else if (n < min) {
-		return min;
-	} else {
-		return n;
-	}
 }
