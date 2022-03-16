@@ -1,6 +1,8 @@
 import React from 'react';
 import * as d3 from 'd3';
 import {clamp} from 'lodash';
+import {BarChartData} from '../types/types';
+import {NumberValue} from 'd3';
 
 const BarChart = () => {
 	React.useEffect(createChart, []);
@@ -32,8 +34,8 @@ function createChart() {
 
 	d3.json(
 		'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json'
-	).then((data: any) => {
-		let dataset: Iterable<number> = data.data;
+	).then((res: BarChartData | unknown) => {
+		const dataset: Iterable<NumberValue> = (res as BarChartData).data;
 
 		const svg = d3.select('.container').append('svg').attr('width', width).attr('height', height);
 

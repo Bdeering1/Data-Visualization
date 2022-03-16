@@ -1,6 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
 import {clamp} from 'lodash';
+import {ScatterPlotData} from '../types/types';
 
 const ScatterPlot = () => {
 	React.useEffect(createPlot, []);
@@ -31,11 +32,13 @@ function createPlot() {
 
 	d3.json(
 		'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json'
-	).then((data: any) => {
+	).then((res: ScatterPlotData | unknown) => {
+		const data = res as ScatterPlotData;
+
 		const years: Iterable<number> = data.map((d) => d.Year);
-		const timeMins: Iterable<number> = data.map((d) => {
+		const timeMins: Date[] = data.map((d) => {
 			let parsedTime = d.Time.split(':');
-			return new Date(0, 0, 0, 0, parsedTime[0], parsedTime[1]);
+			return new Date(0, 0, 0, 0, parseInt(parsedTime[0]), parseInt(parsedTime[1]));
 		});
 		const doping = data.map((d) => (d.Doping !== '' ? true : false));
 
@@ -96,7 +99,7 @@ function createPlot() {
 			.attr('cy', (d) => yScale(d))
 			.attr('class', 'dot')
 			.attr('data-xvalue', (d, i) => years[i])
-			.attr('data-yvalue', (d) => d)
+			.attr('data-yvalue', (d) => String(d))
 			.attr('index', (d, i) => i)
 			.attr('fill', (d, i) => (doping[i] ? '#D85A5E' : '#1C5491'))
 			.on('mouseover', function (e, d) {
